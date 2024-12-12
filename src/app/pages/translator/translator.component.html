@@ -1,0 +1,16 @@
+
+
+<div class="container">
+  <div class="query-input">
+    <mat-form-field appearance="outline">
+      <mat-label>Ingrese una consulta...</mat-label>
+      <input matInput (keydown.enter)="translateSql()"  [(ngModel)]="text">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+  <div class="query-result">
+    <p>{{ queryResult }}</p>
+  </div>
+</div>
+
+
