@@ -8,6 +8,9 @@
   font-family: "Montserrat", sans-serif;
 }
 
+button, table, tr, th, td {
+  font-family: "Montserrat", sans-serif;
+}
 
 .query-input {
   display: flex;
@@ -30,4 +33,18 @@
     width: 80%;
     font-weight: bold;
   }
+}
+
+.div-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-clear {
+  margin-left: 80px;
+}
+
+
+.datatable-result {
+  padding: 50px 0;
 }
