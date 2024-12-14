@@ -32,6 +32,7 @@ export class TranslatorComponent implements OnInit {
   loading: boolean = false;
   queryResult: string = '';
   data: any[] = [];
+  errorExecuteQuery: string = '';
   showButtonExecute: boolean = false;
 
   displayedColumns: string[] = [];
@@ -66,8 +67,13 @@ export class TranslatorComponent implements OnInit {
     this.api.executeQuery(query).subscribe({
       next: (data) => {
         console.log(data)
-        this.displayedColumns = data.columns;
-        this.dataSource = data.rows;
+        if (!data.error) {
+          this.displayedColumns = data.columns;
+          this.dataSource = data.rows;
+        }
+        else {
+          this.errorExecuteQuery = data.error;
+        }
       },
       error: (err) => {
         console.log(`Error en la API: ${err}`);
@@ -80,6 +86,9 @@ export class TranslatorComponent implements OnInit {
     this.showButtonExecute = false;
     this.text = '';
     this.queryResult = '';
+    this.displayedColumns = [];
+    this.dataSource.data = [];
+    this.errorExecuteQuery = '';
   }
 
 }

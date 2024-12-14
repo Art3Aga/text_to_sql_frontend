@@ -10,6 +10,7 @@
   </div>
   <div class="query-result">
     <p>{{ queryResult }}</p>
+    <p *ngIf="errorExecuteQuery != ''" class="error-sql">{{ errorExecuteQuery }}</p>
   </div>
   <div class="div-buttons">
     <button mat-raised-button class="btn-execute-query" *ngIf="showButtonExecute" (click)="executeQuery(queryResult)">Ejecutar Query</button>
