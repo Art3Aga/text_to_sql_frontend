@@ -16,7 +16,7 @@ button, table, tr, th, td {
   display: flex;
   justify-content: center;
   mat-form-field {
-    width: 80%;
+    width: 100%;
     input {
       padding: 0 20px;
       font-family: "Montserrat", sans-serif;
@@ -28,9 +28,14 @@ button, table, tr, th, td {
 .query-result {
   display: flex;
   justify-content: center;
-  width: 100%;
+  // width: 100%;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(29, 29, 29, 0.445);
+  border-radius: 4px;
+  padding: 0 20px;
   p  {
     width: 80%;
     font-weight: bold;
@@ -39,7 +44,7 @@ button, table, tr, th, td {
 
 .div-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: start;
 }
 
 .btn-clear {

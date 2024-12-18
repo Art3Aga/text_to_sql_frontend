@@ -8,6 +8,9 @@
       <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
   </div>
+  <div>
+    <button mat-raised-button (click)="translateSql()">Traducir a SQL</button>
+  </div>
   <div class="query-result">
     <p>{{ queryResult }}</p>
     <p *ngIf="errorExecuteQuery != ''" class="error-sql">{{ errorExecuteQuery }}</p>

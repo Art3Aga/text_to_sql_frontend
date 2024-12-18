@@ -46,6 +46,9 @@ export class TranslatorComponent implements OnInit {
   }
 
   translateSql() {
+    if (this.text == '') {
+      return;
+    }
     this.loading = true;
     this.queryResult = 'Cargando...';
     this.api.translateToSql(this.text).subscribe({
